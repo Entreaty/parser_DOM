@@ -1,12 +1,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <pre>
 <?php
-/**
- * get_links()
- *@author Jay Gilford
- * @param string $url
- * @return array
- */
+/**get_links()*@author Jay Gilford @param string $url @return array  */
 function get_links($url) {
 
     // Create a new DOM Document to hold our webpage structure
