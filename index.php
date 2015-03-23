@@ -9,8 +9,7 @@ function get_links($url) {
 
     // Load the url's contents into the DOM
     $xml->loadHTMLFile($url);
-    echo '!!!!!!'.$xml->xmlEncoding.'<br>';
-    echo '!!!!!!'.$xml->encoding.'<br>';
+
     // Empty array to hold all links to return
     $links = array();
 
@@ -22,7 +21,12 @@ function get_links($url) {
     //Return the links
     return $links;
 }
-$links=@get_links("http://kirovsky.tms.sudrf.ru/modules.php?name=docum_sud&rid=6");
-print_r($links);
+$links=@get_links("http://kirovsky.tms.sudrf.ru/modules.php?name=docum_sud&rid=14");
+
+
+
+for($i=0; $i<count($links); $i++){echo($i.'= '.$links[$i][url]).'<br>';}
+//foreach($links as $link){echo(array_search('modules.php?name=docum_sud&id=601',$link));}
+//print_r($links);
 ?>
 
